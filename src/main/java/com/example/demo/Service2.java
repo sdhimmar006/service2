@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.UUID;
 
 @SpringBootApplication
 public class Service2 implements WebMvcConfigurer {
@@ -28,8 +29,7 @@ public class Service2 implements WebMvcConfigurer {
 					public boolean preHandle(
 							HttpServletRequest request, HttpServletResponse response, Object handler)
 							throws Exception {
-						spanCustomizer.tag("session-id", request.getSession().getId());
-						spanCustomizer.tag("environment", "QA");
+						spanCustomizer.tag("uuid", UUID.randomUUID().toString());
 						return true;
 					}
 				});
