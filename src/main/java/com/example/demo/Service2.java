@@ -18,6 +18,7 @@ public class Service2 implements WebMvcConfigurer {
 	public static void main(String[] args) {
 		SpringApplication.run(Service2.class, args);
 	}
+
 	@Autowired
 	private SpanCustomizer spanCustomizer;
 

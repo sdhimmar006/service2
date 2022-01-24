@@ -15,7 +15,7 @@ public class WebController {
     @SneakyThrows
     public ResponseEntity<String> postMsg(){
         log.info("came to service2");
-        Thread.sleep(1800);
+        Thread.sleep(80);
         log.info("going back from service2");
         return ResponseEntity.ok("From service2");
     }
