@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 public class WebController {
 
-    @Value("sleep")
+    @Value("${sleep}")
     Integer sleep;
 
     @GetMapping("/service2")

@@ -23,6 +23,7 @@ kubectl create service loadbalancer $APP_NAME --tcp=$SERVICE2_PORT:$SERVICE2_POR
 **Update an existing service**
 
 export VERSION=$(($(date +%s%N)/1000000))
+export APP_NAME=service2
 ./mvnw -DskipTests package
 ./mvnw -DskipTests com.google.cloud.tools:jib-maven-plugin:build \
 -Dimage=gcr.io/$GOOGLE_CLOUD_PROJECT/$APP_NAME:$VERSION
