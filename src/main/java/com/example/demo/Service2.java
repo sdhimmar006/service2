@@ -28,8 +28,7 @@ public class Service2 implements WebMvcConfigurer {
 				new HandlerInterceptor() {
 					@Override
 					public boolean preHandle(
-							HttpServletRequest request, HttpServletResponse response, Object handler)
-							throws Exception {
+							HttpServletRequest request, HttpServletResponse response, Object handler) {
 						spanCustomizer.tag("uuid", UUID.randomUUID().toString());
 						return true;
 					}

@@ -1,0 +1,10 @@
+server
+  port: 8082
+
+sleep: 80
+
+spring
+  application.name: service2
+  cloud.gcp:
+    logging.enabled: false
+    trace.enabled: false
