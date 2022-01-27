@@ -12,11 +12,13 @@ export SERVICE2_PORT=8082
 export APP_NAME=service2
 export GOOGLE_CLOUD_PROJECT=`gcloud config list --format="value(core.project)"`
 export VERSION=$(($(date +%s%N)/1000000))
+cd service2
+./mvnw -DskipTests package
 ./mvnw -DskipTests com.google.cloud.tools:jib-maven-plugin:build \
 -Dimage=gcr.io/$GOOGLE_CLOUD_PROJECT/$APP_NAME:$VERSION
 kubectl create deployment $APP_NAME \
 --image=gcr.io/$GOOGLE_CLOUD_PROJECT/$APP_NAME:$VERSION
-kubectl create service loadbalancer2 $APP_NAME --tcp=$SERVICE2_PORT:$SERVICE2_PORT
+kubectl create service loadbalancer $APP_NAME --tcp=$SERVICE2_PORT:$SERVICE2_PORT
 
 **Update an existing service**
 
