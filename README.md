@@ -1,10 +1,13 @@
 
-**One time setup**
+**One time GKE setup**
 ```
 gcloud container clusters create service-cluster \
 --num-nodes 2 \
 --machine-type n1-standard-1 \
 --zone us-central1-c
+```
+**One time setup of service2**
+```
 gcloud services enable compute.googleapis.com container.googleapis.com containerregistry.googleapis.com cloudtrace.googleapis.com logging.googleapis.com
 git clone https://github.com/sdhimmar006/service2.git
 chmod +x service2/mvnw
