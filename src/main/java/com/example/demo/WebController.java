@@ -18,8 +18,15 @@ public class WebController {
     @SneakyThrows
     public ResponseEntity<String> postMsg(){
         log.info("came to service2");
-        Thread.sleep(sleep);
+//        Thread.sleep(sleep);
         log.info("going back from service2");
         return ResponseEntity.ok("From service2");
+    }
+
+    @GetMapping("/errorEndpoint")
+    @SneakyThrows
+    public ResponseEntity<String> errorEndpoint(){
+        log.error("some random error");
+        return ResponseEntity.ok("From service2 error");
     }
 }
