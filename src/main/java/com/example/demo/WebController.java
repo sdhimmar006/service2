@@ -16,7 +16,7 @@ public class WebController {
     @Value("${sleep}")
     Integer sleep;
 
-    private static final Logger logger = LoggerFactory.getLogger(WebController.class);
+//    private static final Logger logger = LoggerFactory.getLogger(WebController.class);
 
     @GetMapping("/service2")
     @SneakyThrows
@@ -31,7 +31,7 @@ public class WebController {
     @SneakyThrows
     public ResponseEntity<String> errorEndpoint(){
         log.error("some random error");
-        logger.error("Logging ERROR with Logback");
+//        logger.error("Logging ERROR with Logback");
         return ResponseEntity.ok("From service2 error");
     }
 }

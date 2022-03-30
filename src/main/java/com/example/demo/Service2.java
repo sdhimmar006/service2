@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import brave.SpanCustomizer;
+//import brave.SpanCustomizer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,25 +13,25 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @SpringBootApplication
-public class Service2 implements WebMvcConfigurer {
+public class Service2  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Service2.class, args);
 	}
 
-	@Autowired
-	private SpanCustomizer spanCustomizer;
+//	@Autowired
+//	private SpanCustomizer spanCustomizer;
 
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(
-				new HandlerInterceptor() {
-					@Override
-					public boolean preHandle(
-							HttpServletRequest request, HttpServletResponse response, Object handler) {
-						spanCustomizer.tag("uuid", UUID.randomUUID().toString());
-						return true;
-					}
-				});
-	}
+//	@Override
+//	public void addInterceptors(InterceptorRegistry registry) {
+//		registry.addInterceptor(
+//				new HandlerInterceptor() {
+//					@Override
+//					public boolean preHandle(
+//							HttpServletRequest request, HttpServletResponse response, Object handler) {
+//						spanCustomizer.tag("uuid", UUID.randomUUID().toString());
+//						return true;
+//					}
+//				});
+//	}
 }
