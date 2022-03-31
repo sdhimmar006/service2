@@ -30,7 +30,7 @@ public class WebController {
     @GetMapping("/errorEndpoint")
     @SneakyThrows
     public ResponseEntity<String> errorEndpoint(){
-        log.error("some random error");
+        int x=5/0;
 //        logger.error("Logging ERROR with Logback");
         return ResponseEntity.ok("From service2 error");
     }
