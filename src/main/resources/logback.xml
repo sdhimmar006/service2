@@ -5,7 +5,7 @@
             <level>INFO</level>
         </filter>
         <log>application.log</log> <!-- Optional : default java.log -->
-        <resourceType>gke_app</resourceType> <!-- Optional : default: auto-detected, fallback: global -->
+<!--        <resourceType>gke_app</resourceType> &lt;!&ndash; Optional : default: auto-detected, fallback: global &ndash;&gt;-->
 <!--        <enhancer>com.example.logging.logback.enhancers.ExampleEnhancer</enhancer> &lt;!&ndash; Optional &ndash;&gt;-->
         <flushLevel>WARN</flushLevel> <!-- Optional : default ERROR -->
     </appender>
