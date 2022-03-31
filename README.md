@@ -2,7 +2,7 @@
 **One time GKE setup**
 ```
 gcloud container clusters create service-cluster \
---num-nodes 2 \
+--num-nodes 1 \
 --machine-type n1-standard-1 \
 --zone us-central1-c
 ```
