@@ -1,6 +1,8 @@
 package com.example.demo;
 
 //import brave.SpanCustomizer;
+import com.google.cloud.logging.Logging;
+import com.google.cloud.logging.LoggingOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +18,9 @@ import java.util.UUID;
 public class Service2  {
 
 	public static void main(String[] args) {
+//		LoggingOptions.Builder optionsBuilder = LoggingOptions.newBuilder();
+//		System.out.println("optionsBuilder:::"+optionsBuilder);
+//		Logging logging = optionsBuilder.setProjectId("qwiklabs-gcp-01-fbfb6600dfc0").build().getService();
 		SpringApplication.run(Service2.class, args);
 	}
 
