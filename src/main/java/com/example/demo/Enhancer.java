@@ -7,7 +7,7 @@ import com.google.cloud.logging.LoggingEnhancer;
 
 // Add / update additional fields to the log entry
 
-public class CloudLogEnhancer implements LoggingEnhancer {
+public class Enhancer implements LoggingEnhancer {
 
     @Override
     public void enhanceLogEntry(LogEntry.Builder logEntry) {
