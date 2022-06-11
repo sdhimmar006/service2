@@ -8,7 +8,7 @@ gcloud container clusters create service-cluster \
 --machine-type n1-standard-1 \
 --zone us-central1-c \
 --workload-metadata=GKE_METADATA
---project=${PROJECT}
+--project=${PROJECT_ID}
 ```
 **One time setup of service2**
 ```
