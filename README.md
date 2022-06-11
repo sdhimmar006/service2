@@ -7,8 +7,9 @@ gcloud container clusters create service-cluster \
 --num-nodes 1 \
 --machine-type n1-standard-1 \
 --zone us-central1-c \
---workload-metadata=GKE_METADATA
---project=${PROJECT_ID}
+--workload-metadata=GKE_METADATA \
+--project=${PROJECT_ID} \
+--workload-pool=${PROJECT_ID}.svc.id.goog
 ```
 **One time setup of service2**
 ```
