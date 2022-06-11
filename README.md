@@ -13,7 +13,7 @@ gcloud container clusters create service-cluster \
 ```
 **One time setup of service2**
 ```
-gcloud services enable compute.googleapis.com container.googleapis.com containerregistry.googleapis.com cloudtrace.googleapis.com logging.googleapis.com
+gcloud services enable compute.googleapis.com container.googleapis.com containerregistry.googleapis.com cloudtrace.googleapis.com logging.googleapis.com secretmanager.googleapis.com
 git clone https://github.com/sdhimmar006/service2.git
 chmod +x service2/mvnw
 export SERVICE2_PORT=8082
