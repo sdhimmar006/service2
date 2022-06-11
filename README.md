@@ -4,8 +4,8 @@
 export PROJECT_ID=$(gcloud config get-value project)
 
 gcloud container clusters create service-cluster \
---num-nodes 1 \
---machine-type n1-standard-1 \
+--num-nodes 3 \
+--machine-type n1-standard-2 \
 --zone us-central1-c \
 --workload-metadata=GKE_METADATA \
 --project=${PROJECT_ID} \
